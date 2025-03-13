@@ -59,7 +59,7 @@ export const UrlAnalytics = () => {
 				<p className="text-red-500 mb-4">
 					Error loading analytics for this URL.
 				</p>
-				<Button onClick={() => navigate("/urls")}>Back to URLs</Button>
+				<Button onClick={() => navigate("/dashboard")}>Back to URLs</Button>
 			</div>
 		);
 	}
@@ -67,7 +67,7 @@ export const UrlAnalytics = () => {
 	return (
 		<div className="space-y-6">
 			<div className="flex items-center justify-between">
-				<Button variant="outline" onClick={() => navigate("/urls")}>
+				<Button variant="outline" onClick={() => navigate("/dashboard")}>
 					<ArrowLeft className="h-4 w-4 mr-2" />
 					Back to URLs
 				</Button>

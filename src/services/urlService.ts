@@ -30,7 +30,6 @@ export const urlService = {
 		const response = await apiClient.get<ApiAnalyticsResponse>(
 			`/url/analytics/${shortCode}`,
 		);
-		console.log(response.data);
 		const data = response.data.data;
 
 		const browserCounts: Record<string, number> = {};

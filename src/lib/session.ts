@@ -2,7 +2,6 @@ import Cookies from "js-cookie";
 import { v4 as uuidv4 } from "uuid";
 import { encrypt, decrypt } from "./crypto";
 import { Register } from "@tanstack/react-query";
-import { AuthResponse, RegisterRequest, UserInterface } from "@/types/auth";
 
 interface Analytics {
 	id: string;
@@ -57,7 +56,6 @@ const COOKIE_OPTIONS = {
 };
 
 export function createSession(userData: UserData): string {
-	console.log("CREATE", userData);
 	const sessionId = userData.id;
 	const sessionData = {
 		id: sessionId,
@@ -84,7 +82,6 @@ export function getSession(): SessionData | null {
 			return null;
 		}
 
-		console.log("GET", sessionData);
 		return sessionData;
 	} catch (error) {
 		destroySession();
